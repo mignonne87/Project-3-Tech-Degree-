@@ -64,15 +64,15 @@
 }
 
   // Cost calculation
-    let activity = e.target;                                                   // Targets which activity checked
+    let activity = e.target;                                                  
     let activityText = activity.parentNode.textContent;                        // Get text content     
     let priceIndex = activityText.indexOf('$');                                // Get $ index value
     let price = activityText.slice(priceIndex + 1);                            
 
         if (activity.checked) {                                                    
-    totalCost += parseInt(price);                                            // Add the price to the total cost
+    totalCost += parseInt(price);                                            // Add price to the total cost
   }     else {
-    totalCost -= parseInt(price);                                            // subtract the cost if unchecked
+    totalCost -= parseInt(price);                                            // subtract total cost if unchecked
   }
     $('.activities label').last().text('Total Cost: $' + totalCost);          
 });
